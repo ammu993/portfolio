@@ -6,11 +6,286 @@
 -->
 <html>
 	<head>
-		<title>About me</title>
+		<title>About Me - Ammu Joshy</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Force dark background for main content area */
+			#main {
+				background-color: transparent !important;
+			}
+
+			#main .post {
+				background-color: transparent !important;
+				border-top: none !important;
+			}
+			#footer {
+        background-color: #c8bbbb !important;
+   			 }
+
+   			 #footer h3 {
+       		 color: #020202 !important;
+   			 }
+
+			/* Modern enhancements for About Me page */
+			.resume {
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+
+			.resume * {
+				color: #ffffff !important;
+			}
+
+			.profile-header {
+				display: flex;
+				align-items: flex-start;
+				gap: 2rem;
+				margin-bottom: 3rem;
+				padding-bottom: 2rem;
+				border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+			}
+
+			.profile-image {
+				flex-shrink: 0;
+				width: 180px;
+				height: 180px;
+				border-radius: 12px;
+				overflow: hidden;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+			}
+
+			.profile-image img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			.profile-content h1 {
+				margin: 0 0 0.5rem 0;
+				font-size: 2.5rem;
+				font-weight: 700;
+				color: #ffffff !important;
+			}
+
+			.profile-tagline {
+				font-size: 1.2rem;
+				color: #f2f4f5 !important;
+				margin-bottom: 1rem;
+				font-weight: 500;
+			}
+
+			.profile-summary {
+				line-height: 1.7;
+				color: rgba(255, 255, 255, 0.85) !important;
+			}
+
+			.section-title {
+				font-size: 1.8rem;
+				font-weight: 700;
+				margin: 2.5rem 0 1.5rem 0;
+				color: #fff !important;
+				border-left: 4px solid #3498db;
+				padding-left: 1rem;
+			}
+
+			.skills-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 2rem;
+				margin: 2rem 0;
+			}
+
+			.skills-card {
+				background: rgba(255, 255, 255, 0.05);
+				padding: 1.5rem;
+				border-radius: 8px;
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				transition: all 0.3s ease;
+			}
+
+			
+			.skills-card:hover {
+				background: rgba(255, 255, 255, 0.08);
+				border-color: #3498db;
+				transform: translateY(-2px);
+			}
+
+			.skills-card h3 {
+				margin-top: 0;
+				margin-bottom: 1rem;
+				color: #f2f4f5 !important;
+				font-size: 1.3rem;
+			}
+
+			.skills-card ul {
+				margin: 0;
+				padding-left: 1.2rem;
+			}
+
+			.skills-card li {
+				padding: 0.3rem 0;
+				color: rgba(255, 255, 255, 0.85) !important;
+			}
+
+			.experience-item {
+				background: rgba(255, 255, 255, 0.05);
+				padding: 2rem;
+				margin-bottom: 2rem;
+				border-radius: 8px;
+				border-left: 4px solid #3498db;
+				transition: all 0.3s ease;
+			}
+
+			.experience-item:hover {
+				background: rgba(255, 255, 255, 0.08);
+				transform: translateX(5px);
+			}
+
+			.experience-item.featured {
+				border-left-color: #e36759;
+				background: rgba(231, 76, 60, 0.08);
+			}
+
+			.experience-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+				margin-bottom: 1rem;
+				flex-wrap: wrap;
+				gap: 0.5rem;
+			}
+
+			.experience-title {
+				margin: 0;
+				font-size: 1.4rem;
+				font-weight: 600;
+				color: #fff !important;
+			}
+
+			.experience-date {
+				color: #f2f4f5 !important;
+				font-weight: 500;
+				font-size: 0.95rem;
+				white-space: nowrap;
+			}
+
+			.experience-company {
+				color: rgba(255, 255, 255, 0.7) !important;
+				font-size: 1.1rem;
+				margin-bottom: 1rem;
+			}
+
+			.experience-item ul {
+				margin: 0;
+				padding-left: 1.5rem;
+			}
+
+			.experience-item li {
+				padding: 0.4rem 0;
+				line-height: 1.6;
+				color: rgba(255, 255, 255, 0.85) !important;
+			}
+
+			.education-item {
+				background: rgba(255, 255, 255, 0.05);
+				padding: 1.5rem;
+				margin-bottom: 1.5rem;
+				border-radius: 8px;
+				border: 1px solid rgba(255, 255, 255, 0.1);
+			}
+
+			.education-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+				margin-bottom: 0.8rem;
+				flex-wrap: wrap;
+				gap: 0.5rem;
+			}
+
+			.education-title {
+				margin: 0;
+				font-size: 1.2rem;
+				font-weight: 600;
+				color: #fff !important;
+			}
+
+			.education-date {
+				color: #f2f4f5 !important;
+				font-weight: 500;
+				font-size: 0.9rem;
+			}
+
+			.education-institution {
+				color: rgba(255, 255, 255, 0.7) !important;
+				margin-bottom: 0.8rem;
+			}
+
+			.education-item ul {
+				margin: 0;
+				padding-left: 1.5rem;
+			}
+
+			.education-item li {
+				padding: 0.3rem 0;
+				color: rgba(255, 255, 255, 0.85) !important;
+				line-height: 1.6;
+			}
+
+			.badge {
+				display: inline-block;
+				background: #e74c3c;
+				color: #fff;
+				padding: 0.3rem 0.8rem;
+				border-radius: 20px;
+				font-size: 0.75rem;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+				margin-left: 1rem;
+			}
+	
+			@media screen and (max-width: 980px) {
+				.skills-grid {
+					grid-template-columns: 1fr;
+				}
+			}
+
+			@media screen and (max-width: 768px) {
+				.profile-header {
+					flex-direction: column;
+					align-items: center;
+					text-align: center;
+				}
+
+				.profile-image {
+					width: 150px;
+					height: 150px;
+				}
+
+				.section-title {
+					font-size: 1.5rem;
+				}
+
+				.skills-grid {
+					grid-template-columns: 1fr;
+				}
+
+				.experience-header,
+				.education-header {
+					flex-direction: column;
+					align-items: flex-start;
+				}
+
+				.badge {
+					margin-left: 0;
+					margin-top: 0.5rem;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -19,139 +294,208 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="generic.html" class="logo">Resume</a>
+						<a href="index.html" class="logo">Profile</a>
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
 							<li><a href="index.html">Projects</a></li>
-							<li class="active"><a href="generic.html">About me</a></li>
-							
+							<li class="active"><a href="generic.html">About Me</a></li>
 						</ul>
 						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/ammu-joshy-01/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/ammu993" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/ammu-joshy-01/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/ammu993" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 						</ul>
 					</nav>
+
+				<!-- Main -->
 					<div id="main">
-						<!-- Resume Section -->
-						<section class="resume">
-							<header class="major">
-								<p><span class="image left"><img src="images/Photo-AJ.jpg" alt="" /></span>
-									<h1>Ammu Joshy</h1>
-									<p>Data Analyst | Critical Thinker | Problem Solver </p>
-									<p>Researcher with 3 years of expertise and a Master's degree in engineering and philosophy. Demonstrates strong problem-solving and critical-thinking abilities. Approachable and open-minded, with excellent analytical skills when navigating and understanding different perspectives. Hands-on, driven, and highly motivated individual with curiosity about understanding end-to-end processes, the data that fuels them, and the insights they generate.</p>
-								
-							</header>
-					<!-- Lists -->
-					<h2>Skills</h2>
-					<div class="row">
-						<div class="col-6 col-12-small">
 
-							<h3>Soft Skills</h3>
-							<ul>
-								<li>Analytical Thinking</li>
-								<li>Communication</li>
-								<li>Attention to Detail</li>
-								<li>Team Collaboration</li>
-								<li>Adaptability</li>
-								<li>Continuous Learning</li>
-							</ul>
+						<!-- Post -->
+							<section class="post">
+								<section class="resume">
+									<!-- Profile Header -->
+									<div class="profile-header">
+										<div class="profile-image">
+											<img src="images/my_image.jpeg" alt="Ammu Joshy" />
+										</div>
+										<div class="profile-content">
+											<h1>Ammu Joshy</h1>
+											<div class="profile-tagline">Data Analyst | AI Consultant | Problem Solver</div>
+											<p class="profile-summary">
+												Analytical professional with 3+ years of experience transitioning from research and consulting into data analytics and GenAI strategy. Combines technical proficiency in SQL, Python, and Power BI with strategic advisory on M365 Copilot adoption, governance frameworks, and AI ethics. Established strength in analyzing qualitative and quantitative data, building dashboards, and delivering actionable insights. Skilled in Product Analytics (Cohort Analysis, Retention, Funnels, A/B Testing), KPIs & metrics, and translating complex data into executive-ready reporting for stakeholders.
+											</p>
+										</div>
+									</div>
 
-						</div>
-						<div class="col-6 col-12-small">
+									<!-- Skills Section -->
+									<h2 class="section-title">Skills</h2>
+									<div class="skills-grid">
+										<div class="skills-card">
+											<h3>Programming & Tools</h3>
+											<ul>
+												<li>SQL (BigQuery, PostgreSQL)</li>
+												<li>Python (Pandas, NumPy, Matplotlib)</li>
+												<li>Power BI</li>
+												<li>Tableau</li>
+												<li>Excel</li>
+												<li>GitHub</li>
+											</ul>
+										</div>
 
-							<h3>Technical Skills</h3>
-							<ul>
-								<li>Intermediate: SQL, Excel, Tableau</li>
-								<li>Basics: Python, HTML, CSS</li>
-							
-							</ul>
-						</div>
+										<div class="skills-card">
+											<h3>Analytics & BI</h3>
+											<ul>
+												<li>Cohort Analysis & A/B Testing</li>
+												<li>Funnels, Retention & LTV</li>
+												<li>User Behavior Analysis</li>
+												<li>Customer Segmentation</li>
+												<li>Dashboards & Reporting</li>
+												<li>KPIs & Data Visualization</li>
+												<li>Regression Analysis</li>
+											</ul>
+										</div>
+
+										<div class="skills-card">
+											<h3>AI Strategy & Governance</h3>
+											<ul>
+												<li>LLMs, GPT, Gemini</li>
+												<li>Prompt Engineering & AI Agents</li>
+												<li>M365 Copilot Adoption</li>
+												<li>AI Ethics Frameworks</li>
+												<li>Adoption Measurement</li>
+												<li>Compliance & Governance</li>
+												<li>Stakeholder Collaboration</li>
+											</ul>
+										</div>
+									</div>
+
+									<!-- Experience Section -->
+									<h2 class="section-title">Experience</h2>
+
+									<!-- Featured Recent Experience -->
+									<div class="experience-item featured">
+										<div class="experience-header">
+											<h3 class="experience-title">
+												Senior IT Strategy Consultant for GenAI (DWS)
+												<span class="badge">Recent</span>
+											</h3>
+											<span class="experience-date">Jun 2025 - Dec 2025</span>
+										</div>
+										<div class="experience-company">Kyndryl Deutschland, Stuttgart</div>
+										<ul>
+											<li>Executed M365 Copilot Adoption Proof of Concept involving 30 pilot users across 5 departments, coordinating enablement sessions and survey deployment to assess organizational readiness and productivity impact</li>
+											<li>Designed and administered weekly surveys measuring learning progress, confidence levels, and adoption barriers across Microsoft 365 applications (Teams, Outlook, SharePoint, Word, Excel), delivering real-time insights that informed training strategy adjustments</li>
+											<li>Developed Power BI dashboards and KPI visualizations tracking training effectiveness, quality index, and efficiency index, enabling stakeholders to evaluate measurable business value and support data-driven rollout decisions</li>
+											<li>Documented POC implementation methodology and project phases to create reusable reference materials for future Copilot adoption initiatives, strengthening GenAI service offering and supporting business development with scalable frameworks</li>
+										</ul>
+									</div>
+
+									<div class="experience-item">
+										<div class="experience-header">
+											<h3 class="experience-title">Scientific Research Associate - Trust & Ethics of AI</h3>
+											<span class="experience-date">Apr 2021 - Feb 2025</span>
+										</div>
+										<div class="experience-company">High Performance Computing Center (HLRS), Stuttgart</div>
+										<ul>
+											<li>Conducted 27-month research project analyzing qualitative and quantitative data on trust in Science, delivering findings at academic conferences and producing actionable insights for interdisciplinary audiences</li>
+											<li>Designed and executed social experiment with 25+ participants, interpreting behavioral data to identify patterns in reputation and trust in expertise</li>
+											<li>Organized university-wide lecture series on AI ethics, coordinating 15+ expert speakers and facilitating cross-disciplinary dialogue to promote awareness of AI evaluation frameworks</li>
+										</ul>
+									</div>
+
+									<!-- Education Section -->
+									<h2 class="section-title">Education</h2>
+
+									<div class="education-item">
+										<div class="education-header">
+											<h3 class="education-title">Data Analytics Programme</h3>
+											<span class="education-date">Aug 2023 - Sep 2024</span>
+										</div>
+										<div class="education-institution">Turing College (Remote)</div>
+										<ul>
+											<li>Specialized in Product Analytics and Risk Analytics</li>
+											<li>Completed 10+ hands-on projects during 900+ hours of training in Data Visualization, Ad-hoc Analysis, Cohort Analysis, A/B Testing, Funnels, Retention & LTV</li>
+										</ul>
+									</div>
+
+									<div class="education-item">
+										<div class="education-header">
+											<h3 class="education-title">MSc. Philosophy of Science, Technology and Society</h3>
+											<span class="education-date">Aug 2016 - Nov 2018</span>
+										</div>
+										<div class="education-institution">University of Twente, The Netherlands</div>
+										<ul>
+											<li>Empirically oriented program with analytical thinking and research methodologies</li>
+											<li>Focus on analysis of specific technologies (smartphones, voice assistants, automated driving, CRISPR Cas9) and their impacts on society</li>
+											<li>Master's thesis in DIY-biology and CRISPR-Cas9 gene editing technology</li>
+										</ul>
+									</div>
+
+									<div class="education-item">
+										<div class="education-header">
+											<h3 class="education-title">MSc. Systems & Control</h3>
+											<span class="education-date">Sep 2015 - Jun 2016</span>
+										</div>
+										<div class="education-institution">University of Twente, The Netherlands</div>
+										<ul>
+											<li>Completed year 1 of the program</li>
+											<li>Combines mathematics of Systems and Control with applications (e.g., robotics for medical systems)</li>
+										</ul>
+									</div>
+
+									<div class="education-item">
+										<div class="education-header">
+											<h3 class="education-title">B.E. Instrumentation & Control Engineering</h3>
+											<span class="education-date">Jul 2011 - May 2015</span>
+										</div>
+										<div class="education-institution">Manipal Institute of Technology, India</div>
+										<ul>
+											<li>Multi-disciplinary branch including electrical, electronics and instrumentation</li>
+											<li>Coursework: System Modelling & Simulation, Digital Control Systems, Neural Networks and Fuzzy Logic</li>
+										</ul>
+									</div>
+
+									<!-- Certifications Section -->
+									<h2 class="section-title">Certifications</h2>
+
+									<div class="education-item">
+										<div class="education-header">
+											<h3 class="education-title">Microsoft Azure AI Fundamentals</h3>
+											<span class="education-date">Dec 2025</span>
+										</div>
+										<div class="education-institution">Microsoft</div>
+									</div>
+
+									<div class="education-item">
+										<div class="education-header">
+											<h3 class="education-title">Google Generative AI Leader</h3>
+											<span class="education-date">Nov 2025</span>
+										</div>
+										<div class="education-institution">Google</div>
+									</div>
+
+								</section>
+							</section>
+
 					</div>
 
-							<h2>Experience</h2>
-							<h3>Senior IT Strategy Consultant for GenAI (DWS) | Kyndryl Deutschland, Stuttgart</h3>
-							<span class="date">June 2025 - Dec 2025</span>
-							<ul>
-								<li></li>
-							</ul>
-							<h3>Research Associate | High Performance Computing Center, Stuttgart</h3>
-							<span class="date">April 2021 - July 2023 & May 2024 - Feb 2025</span>
-							<ul>
-								<li>Conducted a 27-month research project in Trust in Medical systems.</li>
-								<li>Produced annual reports for Ministerium für Wissenschaft, Forschung und Kunst Baden-Württemberg (MWK) and conference papers based on research findings.</li>
-								<li>Organized and moderated conferences, workshops, summer schools, and lecture series focused on trust in science, disinformation, ethics, and AI assessment.</li>
-								<li>Created a WordPress website within a 3-month timeframe to facilitate interdisciplinary discussions on trust in information.</li>
-								<li>Reviewed and edited academic submissions from external authors to ensure publication quality.</li>
-							</ul>
-							<!-- Add more experience sections as needed -->
-					
-							<!-- Education Section -->
-<section class="education">
-    <h2>Education</h2>
-    
-    <!-- Data Analytics at Turing College -->
-    <div class="institution">
-        <h3>Data Analytics | Turing College</h3>
-        <span class="date">Ongoing</span>
-        <li>Mastered the core data analyst toolkit, emphasizing a structured approach to data analysis, data interpretation, pattern identification, and basic data visualization using spreadsheets and SQL.</li>
-		<li>Developed the ability to transform data insights into compelling stories, creating interactive dashboards using Looker Studio or Tableau, and delivering engaging presentations tailored to different audiences.</li>
-		<li>Explored main analysis types related to customer behavior, e-commerce, customer value, and modeling, including Retention, Cohorts, RFM, CLV, Funnel, A/B Testing, and various regression models.</li>
-    
-	</div><br>
-
-    <!-- MSc. Philosophy of Science, Technology and Society at University of Twente -->
-    <div class="institution">
-        <h3>MSc. Philosophy of Science, Technology and Society | University of Twente, The Netherlands</h3>
-        <span class="date">Graduated: 2018</span>
-        <li>Empirically oriented program with focus not only on traditional philosophy or gaining an understanding of technology in general but also on the analysis of specific technologies (such as smartphones, voice assistants, automated driving, CRISPR Cas9) and their impacts on society.</li>
-		<li>Master's thesis in DIY-biology and CRISPR-Cas9 gene editing technology</li>
-		</div><br>
-
-    <!-- MSc. Systems & Control at University of Twente -->
-    <div class="institution">
-        <h3>MSc. Systems & Control | University of Twente, The Netherlands</h3>
-        <span class="date">Graduated: 2016</span>
-        <li>Completed year 1 of the program</li>
-		<li>Combines knowledge of the mathematics of Systems and Control with specific knowledge of its applications (e.g. robotics for medical systems)</li>
-    </div><br>
-
-    <!-- B.Tech Intrumentation & Control Engineering at Manipal Institute of Technology -->
-    <div class="institution">
-        <h3>B.Tech Instrumentation & Control Engineering | Manipal Institute of Technology, India</h3>
-        <span class="date">Graduated: 2015</span>
-        <li>Multi-disciplinary branch that includes electrical, electronics and instrumentation coursework such as System Modelling & Simulation,Digital Control Systems and Neural Networks and Fuzzy Logic.</li>
-    </div>
-
-    <!-- Add more institutions as needed -->
-</section>
-
-
-							<!-- Add more education sections as needed -->
-					
-						
 				<!-- Footer -->
 					<footer id="footer">
-										
-							<section>
-								<h3>Contact</h3>
-								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/ammu-joshy-01/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/ammu993" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
+						<section>
+							<h3>Contact</h3>
+							<ul class="icons alt">
+								<li><a href="https://www.linkedin.com/in/ammu-joshy-01/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/ammu993" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
 						</section>
 					</footer>
 
 				<!-- Copyright -->
-				<div id="copyright">
-					<ul>
-						<li>&copy; 2024 Ammu Joshy</li>
-						<li>Designed using the <a href="https://html5up.net">HTML5 UP</a> template</li>
-					</ul>
-				</div>
+					<div id="copyright">
+						<ul><li>&copy; 2025 Ammu Joshy</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
 
 			</div>
 
@@ -165,5 +509,4 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
-
 </html>

@@ -11,6 +11,85 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Force transparent background for main content area - same as generic page */
+		#main {
+        background-color: transparent !important;
+    }
+
+    #main .post {
+        background-color: transparent !important;
+        border-top: none !important;
+    }
+
+    #main h1,
+    #main h2,
+    #main h3,
+    #main p,
+    #main a {
+        color: #ffffff !important;
+    }
+
+    #main .post.featured h2,
+    #main .post.featured p {
+        color: #ffffff !important;
+    }
+
+    /* ADD THIS NEW CODE HERE: */
+    #main b,
+    #main strong {
+        color: #5caee4 !important;
+        font-weight: 700;
+    }
+    .date {
+        color: #cec6c6 !important;
+        font-style: italic;
+        font-size: 0.85rem;
+        font-weight: normal;
+    }
+    #main .post.featured p,
+    #main .posts article p {
+        font-family: inherit;
+        font-size: 1rem;
+        line-height: 1.65;
+    }
+    .posts article .actions,
+    .post.featured .actions {
+        margin-top: auto;
+        padding-top: 1.5rem;
+    }
+
+    .posts article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .posts article .actions {
+        margin-top: auto;
+    }
+
+   #main .button,   
+   #main .posts article .button,
+    #main .post.featured .button {
+    border: 2px solid #939191 !important;
+    color: #fafafa !important;
+    background: transparent !important;
+}
+
+    #main .button:hover,
+    #main .posts article .button:hover,
+    #main .post.featured .button:hover {
+        border-color: #ffffff !important;
+        background: transparent !important;
+}
+    #footer {
+        background-color: #c8bbbb !important;
+    }
+
+    #footer h3 {
+        color: #020202 !important;
+    }
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -21,7 +100,7 @@
 					<div id="intro">
 						<h1>Data Portfolio<br />
 						<h2><a href="generic.html">Ammu Joshy</a></h2></h1>
-						<p>Data storyteller skilled in Excel, SQL and Tableau </p>
+						<p>Data storyteller skilled in Python, SQL, Power BI and Tableau</p>
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
@@ -36,8 +115,7 @@
 					<nav id="nav">
 						<ul class="links">
 							<li class="active"><a href="index.html">Projects</a></li>
-							<li><a href="generic.html">About me</a></li>
-							<li><a href="elements.html"></a></li>
+							<li><a href="generic.html">About Me</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://www.linkedin.com/in/ammu-joshy-01/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
@@ -51,11 +129,10 @@
 						<!-- Featured Post -->
 						<article class="post featured">
 							<header class="major">
-								<h2><a href="https://github.com/ammu993/Regional-Music-Preferences-using-python-/blob/f752dfbea826ef28e21614d9e07717892f8e8e57/README.md"> Music Trends Analysis: Regional Preferences <br />
-								</a></h2>
-								<p>A comprehensive analysis of top Spotify songs in 73 countries using <b>Python</b> and <b>Pandas</b> to identify regional music preferences and trends across North America, Latin America, Europe, and the Rest of the World. The project includes visualizations highlighting daily trends and top artists shaping the global music landscape. </p>
+								<h2><a href="https://github.com/ammu993/Regional-Music-Preferences-using-python-/blob/f752dfbea826ef28e21614d9e07717892f8e8e57/README.md">Music Trends Analysis: Regional Preferences</a></h2>
+								<p>A comprehensive analysis of top Spotify songs in 73 countries using <b>Python</b> and <b>Pandas</b> to identify regional music preferences and trends across North America, Latin America, Europe, and the Rest of the World. The project includes visualizations highlighting daily trends and top artists shaping the global music landscape.</p>
 							</header>
-							<a href="#" class="image main"><img src="images\Python (2).png" alt="" /></a>
+							<a href="https://github.com/ammu993/Regional-Music-Preferences-using-python-/blob/f752dfbea826ef28e21614d9e07717892f8e8e57/README.md" class="image main"><img src="images/Python (2).png" alt="" /></a>
 							<ul class="actions special">
 								<li><a href="https://github.com/ammu993/Regional-Music-Preferences-using-python-/blob/f752dfbea826ef28e21614d9e07717892f8e8e57/README.md" class="button large">View Project</a></li>
 							</ul>
@@ -66,161 +143,79 @@
 							<section class="posts">
 								<article>
 									<header>
-										<span class="date">Featured : Product Analytics </span>
-										<h2><a href="#">Customer Purchase Behavior Analysis<br />
-										</a></h2>
+										<span class="date">Product Analytics</span>
+										<h2><a href="https://github.com/ammu993/Product-Analytics-Customer-Behavior/blob/4ab4e8eda553c2f7bc517b4b01441391d2f44139/README.md">Customer Purchase Behavior Analysis</a></h2>
 									</header>
-									<a href="#" class="image fit"><img src="images\Product analytics.png" alt="" /></a>
-									<p>A product analytics project that analyzed user purchase patterns using <b> BigQuery</b>,<b>Google Slides </b> and <b> Google Spreadsheets </b> to examine the dynamic daily purchase duration and distribution of puchase duration by device category.</p>
+									<a href="https://github.com/ammu993/Product-Analytics-Customer-Behavior/blob/4ab4e8eda553c2f7bc517b4b01441391d2f44139/README.md" class="image fit"><img src="images/Product analytics.png" alt="" /></a>
+									<p>A product analytics project that analyzed user purchase patterns using <b>BigQuery</b>, <b>Google Slides</b> and <b>Google Spreadsheets</b> to examine the dynamic daily purchase duration and distribution of purchase duration by device category.</p>
 									<ul class="actions special">
 										<li><a href="https://github.com/ammu993/Product-Analytics-Customer-Behavior/blob/4ab4e8eda553c2f7bc517b4b01441391d2f44139/README.md" class="button">View Project</a></li>
 									</ul>
 								</article>
 								<article>
 									<header>
-										<span class="date">Featured : Data Visualization</span>
-										<h2><a href="https://github.com/ammu993/Customer-Demographics-Analysis/blob/main/README.md">Customer Demographics Analysis<br />
-										</a></h2>
+										<span class="date">Data Visualization</span>
+										<h2><a href="https://github.com/ammu993/Customer-Demographics-Analysis/blob/main/README.md">Customer Demographics Analysis</a></h2>
 									</header>
-									<a href="#" class="image fit"><img src="images/Executive Summary Dashboard (2) (2).png" alt="" /></a>
-									<p>An in-depth customer demographics analysis that utilized <b>Tableau</b>  and <b> BigQuery </b>  to create two interactive dashboards: one tailored for executive decision-making and the other providing actionable insights for marketing and sales teams.</p>
+									<a href="https://github.com/ammu993/Customer-Demographics-Analysis/blob/main/README.md" class="image fit"><img src="images/Executive Summary Dashboard (2) (2).png" alt="" /></a>
+									<p>An in-depth customer demographics analysis that utilized <b>Tableau</b> and <b>BigQuery</b> to create two interactive dashboards: one tailored for executive decision-making and the other providing actionable insights for marketing and sales teams.</p>
 									<ul class="actions special">
 										<li><a href="https://github.com/ammu993/Customer-Demographics-Analysis/blob/main/README.md" class="button">View Project</a></li>
 									</ul>
 								</article>
-								<!-- <article>
-									<header>
-										<h2><a href="#">Funnels & Customer Segmentation<br />
-										</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article> -->
 								<article>
 									<header>
-										<span class="date"></span>
-										<h2><a href="https://github.com/ammu993/Retention-cohorts-churn/blob/main/README.md">Retention, Cohorts & Churn
-										</a></h2>
+										<span class="date">Cohort Analysis</span>
+										<h2><a href="https://github.com/ammu993/Retention-cohorts-churn/blob/main/README.md">Retention, Cohorts & Churn</a></h2>
 									</header>
-									<a href="#" class="image fit"><img src="images/churn.png" alt="" /></a>
-									<p>Weekly subscription cohort analysis for a 6-week period, employing <b>BigQuery</b> and <b>Google Spreadsheets</b> to delve into retention dynamics</b></p>
+									<a href="https://github.com/ammu993/Retention-cohorts-churn/blob/main/README.md" class="image fit"><img src="images/churn.png" alt="" /></a>
+									<p>Weekly subscription cohort analysis for a 6-week period, employing <b>BigQuery</b> and <b>Google Spreadsheets</b> to delve into retention dynamics and understand user behavior patterns.</p>
 									<ul class="actions special">
 										<li><a href="https://github.com/ammu993/Retention-cohorts-churn/blob/main/README.md" class="button">View Project</a></li>
 									</ul>
 								</article>
-								<!-- <article>
-									<header>
-										<span class="date"></span>
-										<h2><a href="https://github.com/ammu993/Visualizing-data-using-tableau/blob/main/README.md">Visualizing data using Tableau</h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/AdventureWorks Sales.png" alt="" /></a>
-									<p>Sales Overview Dashboard created in <b>Tableau</b> that displays KPIs and acts as a starting point for further explanatory and diagnostic analysis, such as investigating the fall in average online monthly sales since July 2002. </p>
-									<ul class="actions special">
-										<li><a href="https://github.com/ammu993/Visualizing-data-using-tableau/blob/main/README.md" class="button">View Project</a></li>
-									</ul>
-								</article> -->
 								<article>
 									<header>
-										<span class="date"></span>
-										<h2><a href="https://github.com/ammu993/Advanced-SQL/blob/main/README.md"> Advanced SQL</a></h2>
+										<span class="date">SQL</span>
+										<h2><a href="https://github.com/ammu993/Advanced-SQL/blob/main/README.md">Advanced SQL</a></h2>
 									</header>
-									<a href="#" class="image fit"><img src="images/sql.png" alt="" /></a>
-									<p>Applying window functions, subqueries, and Common Table Expressions (CTEs) in <b>BigQuery</b>, this project adeptly extracts monthly sales figures, encompassing mean tax rates and the percentage of provinces with tax, categorized by country and region.</b> </p>
+									<a href="https://github.com/ammu993/Advanced-SQL/blob/main/README.md" class="image fit"><img src="images/sql.png" alt="" /></a>
+									<p>Applying window functions, subqueries, and Common Table Expressions (CTEs) in <b>BigQuery</b>, this project adeptly extracts monthly sales figures, encompassing mean tax rates and the percentage of provinces with tax, categorized by country and region.</p>
 									<ul class="actions special">
 										<li><a href="https://github.com/ammu993/Advanced-SQL/blob/main/README.md" class="button">View Project</a></li>
 									</ul>
 								</article>
 								<article>
 									<header>
-										<span class="date"></span>
-										<h2><a href="https://github.com/ammu993/Sales-overview-in-Excel/blob/main/README.md">Data Analytics using Excel </a></h2>
+										<span class="date">Excel</span>
+										<h2><a href="https://github.com/ammu993/Sales-overview-in-Excel/blob/main/README.md">Data Analytics using Excel</a></h2>
 									</header>
-									<a href="#" class="image fit"><img src="images/Overview of sales using Excel.png" alt="" /></a>
-									<p>Leveraging <b>Excel</b>'s pivot tables and charts, the project delivers a succinct overview of sales performance from 2001 to 2004. </p>
+									<a href="https://github.com/ammu993/Sales-overview-in-Excel/blob/main/README.md" class="image fit"><img src="images/Overview of sales using Excel.png" alt="" /></a>
+									<p>Leveraging <b>Excel</b>'s pivot tables and charts, the project delivers a succinct overview of sales performance from 2001 to 2004.</p>
 									<ul class="actions special">
 										<li><a href="https://github.com/ammu993/Sales-overview-in-Excel/blob/main/README.md" class="button">View Project</a></li>
 									</ul>
 								</article>						
 							</section>
 
-						<!-- Footer -->
-							<!--<footer>
-								<div class="pagination">
-									<!--<a href="#" class="previous">Prev</a>
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div>
-							</footer>-->
-						
+                					
 					</div>
 
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
 							<h3>Contact</h3>
-								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/ammu-joshy-01/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/ammu993" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							<!--<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>-->
-						</section>
-						<!-- <section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>1234 Somewhere Road #87257<br />
-								Nashville, TN 00000-0000</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">info@untitled.tld</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section> -->
+							<ul class="icons alt">
+								<li><a href="https://www.linkedin.com/in/ammu-joshy-01/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/ammu993" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
 						</section>
 					</footer>
 
 				<!-- Copyright -->
 				<div id="copyright">
 					<ul>
-						<li>&copy; 2024 Ammu Joshy</li>
+						<li>&copy; 2025 Ammu Joshy</li>
 						<li>Designed using the <a href="https://html5up.net">HTML5 UP</a> template</li>
 					</ul>
 				</div>
